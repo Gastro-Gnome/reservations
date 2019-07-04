@@ -1,0 +1,25 @@
+{
+  "name": "reservations",
+  "version": "1.0.0",
+  "description": "A Yelp clone service to book tables.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appetizer-aperitif/reservations.git"
+  },
+  "keywords": [
+    "reserve",
+    "hours",
+    "reservations",
+    "booking"
+  ],
+  "author": "Jackson Galan",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/appetizer-aperitif/reservations/issues"
+  },
+  "homepage": "https://github.com/appetizer-aperitif/reservations#readme"
+}
