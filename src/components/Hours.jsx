@@ -4,7 +4,8 @@ const Hours = () => {
     return(
         <div id="hoursOperation">
             <table id="hoursOperations">
-                <thead class="businessInfo">Hours</thead>
+                <thead className="businessInfo"></thead>
+                <tr>Hours</tr>
                 <tr>M</tr>
                 <td>9:00am - 5:00pm</td>
                 <tr>T</tr>
