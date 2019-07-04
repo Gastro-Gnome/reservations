@@ -5,7 +5,7 @@ const port = 3000;
 app.use("/", express.static("./dist"))
 
 app.get("/", (req, res) => {
-    console.log("Recieved a GET reqiest!")
+    console.log("Recieved a GET request!")
     res.end();
 })
 
