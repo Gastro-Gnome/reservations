@@ -2,24 +2,15 @@ import React from "react";
 
 const Hours = () => {
     return(
-        <div id="hoursOperation">
-            <table id="hoursOperations">
-                <thead className="businessInfo"></thead>
-                <tr>Hours</tr>
-                <tr>M</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>T</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>W</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>R</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>F</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>S</tr>
-                <td>9:00am - 5:00pm</td>
-                <tr>U</tr>
-                <td>Closed</td>
+        <div className="service business-hours">
+            <h3>Hours</h3>
+            <table className="table-hours">
+                <tbody>
+                    <tr><th scope="row">M</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th scope="row">T</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th scope="row">W</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th scope="row">R</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                </tbody>
             </table>
         </div>
     )
