@@ -4,7 +4,8 @@
   "description": "A Yelp clone service to book tables.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,21 @@
   },
   "homepage": "https://github.com/appetizer-aperitif/reservations#readme",
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.2"
+    "eslint-plugin-react": "^7.14.2",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
