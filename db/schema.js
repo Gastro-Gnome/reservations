@@ -4,8 +4,8 @@ const hoursSchema = new mongoose.Schema({
     biz_id: Number,
     hoursByDay: {
        Mon: {
-          open_hr: Number,
-          close_hr: Number
+          open_at: Number,
+          close_at: Number
        }
     }
  });
