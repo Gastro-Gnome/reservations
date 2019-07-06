@@ -37,7 +37,7 @@ const seed = () => {
         hoursInstance.hoursByDay.Mon.close_hr = currentClose;
         //INSERT
         let currentInstance = new HoursItem(hoursInstance);
-        //async fn
+        //async fn, refactor
         currentInstance.save((err) => {
             if(err) {
                 return renderError(err);
