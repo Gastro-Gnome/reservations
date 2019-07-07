@@ -1,6 +1,6 @@
 //generate an array of objects to pass to the model for document creation
 const HoursItem = require("./model.js");
-const seed = () => {
+const seed = async function() {
     console.log(`seed script running`);
     //provide a biz id
     let bizId = 0;
@@ -13,12 +13,12 @@ const seed = () => {
         biz_id: undefined,
         hoursByDay: {
             Mon: {
-                open_hr: undefined,
-                close_hr: undefined
+                open_at: undefined,
+                close_at: undefined
             }
         }
     };
-    //generate numbers for multiple instances
+    //INCREMENT VALUES, SAVE to DB
     while (bizId < 10) {
         console.log(`loop running in seed script`);
         //no open_hr earlier that 7am, later than 5pm
@@ -33,22 +33,20 @@ const seed = () => {
         }
         //ASSIGN
         hoursInstance.biz_id = bizId;
-        hoursInstance.hoursByDay.Mon.open_hr = currentOpen;
-        hoursInstance.hoursByDay.Mon.close_hr = currentClose;
+        hoursInstance.hoursByDay.Mon.open_at = currentOpen;
+        hoursInstance.hoursByDay.Mon.close_at = currentClose;
         //INSERT
-        let currentInstance = new HoursItem(hoursInstance);
-        //async fn, refactor
-        currentInstance.save((err) => {
-            if(err) {
-                return renderError(err);
-            }
-    })
+        let currentHoursInstance = new HoursItem(hoursInstance);
+        currentHoursInstance = await currentHoursInstance.save();
         //INCREMENT VARIABLES
-        bizId ++
-        currentOpen ++;
-        currentClose ++;
+         bizId ++
+         currentOpen ++;
+         currentClose ++;
     }
+console.log("storage populated", storage);
+};
 
-}
+//exec
+seed();
 
 module.exports = seed;
