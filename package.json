@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "dev-start": "nodemon server.js"
+    "dev-start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -36,11 +36,13 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
     "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.6.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
