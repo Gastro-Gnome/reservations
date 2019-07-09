@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "dev-start": "nodemon ./serv/server.js"
+    "dev-start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.6.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
