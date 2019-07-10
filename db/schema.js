@@ -34,4 +34,10 @@ const hoursSchema = new mongoose.Schema({
   }
  });
 
+hoursSchema.methods.findBizById = async function(number) {
+   let query = await HoursItem.find({
+       biz_id: number
+   })
+   return query;
+}
 module.exports = hoursSchema;
