@@ -8,7 +8,8 @@
     "build": "webpack",
     "dev-start": "nodemon app.js",
     "seed": "node db/seed.js",
-    "fetch": "node ./test/fetch.test.js"
+    "fetch": "node ./test/fetch.test.js",
+    "test-coverage": "jest --coverage --colors"
   },
   "repository": {
     "type": "git",

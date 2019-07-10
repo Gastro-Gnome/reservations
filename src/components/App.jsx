@@ -17,8 +17,6 @@ class App extends Component {
         axios.get('http://localhost:3000/businesses')
         .then(function (response) {
             //handle response
-            console.log(response.data)
-            console.log(instance);
             instance.setState({hoursItem: response.data});
         })
         .catch(function (error) {
