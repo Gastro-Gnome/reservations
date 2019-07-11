@@ -6,7 +6,17 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            hoursItems: []
+            hoursItems: [
+                {
+                    Mon: {open_at: "placeholder", close_at: "placeholder"},
+                    Tue: {open_at: "placeholder", close_at: "placeholder"},
+                    Wed: {open_at: "placeholder", close_at: "placeholder"},
+                    Thu: {open_at: "placeholder", close_at: "placeholder"},
+                    Fri: {open_at: "placeholder", close_at: "placeholder"},
+                    Sat: {open_at: "placeholder", close_at: "placeholder"},
+                    Sun: {open_at: "placeholder", close_at: "placeholder"}
+                 }
+            ]
         }
         this.fetchHoursItems = this.fetchHoursItems.bind(this);
     }
@@ -28,8 +38,8 @@ class App extends Component {
         console.log(`App did mount`);
         //use fetch to make a get request to /businesses
         this.fetchHoursItems();
-
     }
+    
     render() {
         return(
            <Hours hoursItem={this.state.hoursItems[0]} />
