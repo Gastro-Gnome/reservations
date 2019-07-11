@@ -1,13 +1,12 @@
 import React, {Component} from "react";
 import axios from "axios";
-//component should contain a function, componentDidMount,
-//that sends a get request to /businesses
+import Hours from "./Hours.jsx";
 
 class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            hoursitems: []
+            hoursItems: []
         }
         this.fetchHoursItems = this.fetchHoursItems.bind(this);
     }
@@ -17,7 +16,7 @@ class App extends Component {
         axios.get('http://localhost:3000/businesses')
         .then(function (response) {
             //handle response
-            instance.setState({hoursItem: response.data});
+            instance.setState({hoursItems: response.data});
         })
         .catch(function (error) {
             // handle error
@@ -33,7 +32,7 @@ class App extends Component {
     }
     render() {
         return(
-            <div>Hello</div>
+           <Hours hoursItem={this.state.hoursItems[0]} />
         )
     }
 };
