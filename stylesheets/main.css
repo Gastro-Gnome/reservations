@@ -1,0 +1,18 @@
+h3 {
+    border: solid black 1px
+}
+div {
+    border: solid black 1px
+}
+.service {
+    background-color: grey
+}
+.table-hours {
+    text-emphasis-color: red
+}
+tr {
+    padding: 3em
+}
+td {
+    padding: 3em
+}
