@@ -1,26 +1,22 @@
 import React from "react";
-//TODO
-//generate tr from props
 
-const Hours = (props) => {
-    console.log(props.hoursItem);
-    let tdVal = "dayOfReckoning";
-    if (props.hoursItem) {
-        console.log(props.hoursItem.hoursByDay);
-        tdVal = props.hoursItem.hoursByDay.Mon.open_at;
-    }
+const Hours = () => {
     return(
         <div className="service business-hours">
             <h3>Hours</h3>
             <table className="table-hours">
                 <tbody>
-                    <tr><td>{tdVal}</td>
-                    </tr>
+                    <tr><th>Mon</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Tue</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Wed</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Thu</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Fri</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Sat</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Sun</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
                 </tbody>
             </table>
         </div> 
     )
-    
 }
 export default Hours;
 
