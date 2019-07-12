@@ -7,6 +7,7 @@ const Hours = (props) => {
     console.log(props.hoursItem);
     return(
         <div className="service business-hours">
+            <div className="test">goodbye</div>
             <h3>Hours</h3>
             <table className="table-hours">
                 <tbody>
