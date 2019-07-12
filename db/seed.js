@@ -4,9 +4,8 @@ const Model = require("./model.js");
 const mockData = require("./mockData.js");
 
 const seed = function() {
-    //TODO
-    console.log("seed script initiated");
-   //an array of gizhoursItems
+console.log("seed script initiated");
+
    Model.insertMany(mockData, (err, docs) => {
        if (err) {
            console.error(err);
