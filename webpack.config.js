@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: __dirname+"/src/index.js",
+    entry: __dirname+"/src",
     watch: true,
     output: {
         path: __dirname+"/dist",
@@ -15,8 +15,12 @@ module.exports = {
           exclude: /node_modules/,
           use: {
             loader: "babel-loader"
-          }
-        }
+          },
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
       ]
     }
   };
