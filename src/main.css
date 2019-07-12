@@ -1,0 +1,33 @@
+
+h3 {
+    font-weight: bold;
+    color: #d32323;
+    margin: 0 0 6px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+th {
+    display: table-cell;
+    min-width: 36px;
+    padding-right: 18px;
+    font-weight: bold;
+    padding: 0 1em 0 0;
+    border: none;
+    vertical-align: baseline;
+    text-align: left
+}
+td.extra {
+    font-size: 12px;
+    font-weight: bold;
+    color: #41a700;
+}
+.business-hours {
+    background-color: grey;
+}

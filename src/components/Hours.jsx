@@ -1,8 +1,5 @@
 import React from "react";
-//call the server for biz hours
-//pass a bizhoursItem from the database
-//to hours component
-//th attr name is var to render content
+import styles from "../main.css";
 
 const Hours = () => {
     return(
@@ -10,13 +7,13 @@ const Hours = () => {
             <h3>Hours</h3>
             <table className="table-hours">
                 <tbody>
-                    <tr><th scope="row"name="Mon">Mon</th><td><span value="0900">TODO</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Tue">Tue</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Wed">Wed</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Thu">Thu</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Fri">Fri</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Sat">Sat</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
-                    <tr><th scope="row"name="Sun">Sun</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td></tr>
+                    <tr><th>Mon</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra">Open Now</td></tr>
+                    <tr><th>Tue</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
+                    <tr><th>Wed</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
+                    <tr><th>Thu</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
+                    <tr><th>Fri</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
+                    <tr><th>Sat</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
+                    <tr><th>Sun</th><td><span>9:00am</span> - <span>5:00pm</span></td><td className="extra"></td><td className="extra"></td></tr>
                 </tbody>
             </table>
         </div> 
