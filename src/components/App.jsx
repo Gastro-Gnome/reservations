@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
 import Hours from "./Hours.jsx";
+import Reservations from "./Reservations.jsx";
 
 class App extends Component {
     constructor(props) {
@@ -41,8 +42,11 @@ class App extends Component {
     }
     
     render() {
-        return(
-           <Hours hoursItem={this.state.hoursItems[0]} />
+        return (
+            <div>
+            <Reservations />
+            <Hours hoursItem={this.state.hoursItems[0]} />
+            </div>
         )
     }
 };
