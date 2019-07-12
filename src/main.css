@@ -23,3 +23,11 @@ th {
     vertical-align: baseline;
     text-align: left
 }
+td.extra {
+    font-size: 12px;
+    font-weight: bold;
+    color: #41a700;
+}
+.business-hours {
+    background-color: grey;
+}
