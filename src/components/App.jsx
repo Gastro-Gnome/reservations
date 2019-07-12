@@ -17,7 +17,8 @@ class App extends Component {
                     Sat: {open_at: "placeholder", close_at: "placeholder"},
                     Sun: {open_at: "placeholder", close_at: "placeholder"}
                  }
-            ]
+            ],
+            time: new Date
         }
         this.fetchHoursItems = this.fetchHoursItems.bind(this);
     }
@@ -36,8 +37,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log(`App did mount`);
-        //use fetch to make a get request to /businesses
         this.fetchHoursItems();
     }
     
