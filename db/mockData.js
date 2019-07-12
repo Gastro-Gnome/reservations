@@ -23,7 +23,7 @@ let biz1 = {
     },
     Sat: {
         open_at: "10:00 am",
-        close_at: "4:30 pn"
+        close_at: "4:30 pm"
     },
     Sun: {
         open_at: "10:00 am",
