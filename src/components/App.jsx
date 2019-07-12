@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import axios from "axios";
 import Hours from "./Hours.jsx";
-//pass mock data to Hours, after componentDidMount
-//pass db data to Hours
 
 class App extends Component {
     constructor(props) {
