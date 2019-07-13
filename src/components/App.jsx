@@ -38,6 +38,7 @@ class App extends Component {
 
     componentDidMount() {
         this.fetchHoursItems();
+        console.log(this.state.time);
     }
     
     render() {
@@ -50,4 +51,4 @@ class App extends Component {
     }
 };
 
-export default App;
+export default App; 
