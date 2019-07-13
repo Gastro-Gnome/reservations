@@ -1,34 +1,36 @@
 const mongoose = require("mongoose");
 
 const hoursSchema = new mongoose.Schema({
-    Mon: {
-        open_at: String,
-        close_at: String
-    },
-    Tue: {
-        open_at: String,
-        close_at: String
-    },
-    Wed: {
-        open_at: String,
-        close_at: String
-    },
-    Thu: {
-        open_at: String,
-        close_at: String
-    },
-    Fri: {
-        open_at: String,
-        close_at: String
-    },
-    Sat: {
-        open_at: String,
-        close_at: String
-    },
-    Sun: {
-        open_at: String,
-        close_at: String
-    }
- });
+    biz_hrs: [
+        {0: {
+            open_at: String,
+            close_at: String
+        }},
+        {1: {
+            open_at: String,
+            close_at: String
+        }},
+        {2: {
+            open_at: String,
+            close_at: String
+        }},
+        {3: {
+            open_at: String,
+            close_at: String
+        }},
+        {4: {
+            open_at: String,
+            close_at: String
+        }},
+        {5: {
+            open_at: String,
+            close_at: String
+        }},
+        {6: {
+            open_at: String,
+            close_at: String
+        }}
+    ]
+})
 
 module.exports = hoursSchema;
