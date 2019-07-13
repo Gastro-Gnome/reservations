@@ -4,14 +4,22 @@ import styles from "../main.css";
 class Hours extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            day: this.props.time.getDay(),
+            hour: this.props.time.getHours()
+        }
     }
     componentDidMount() {
         console.log(`from Hours`,this.props.hoursItem);
+        //set state.day to currentTime.getDay
+        //conditional render td class extra 
+    }
+    dailyStatus() {
+        if ()
     }
     render() {
         return(
                 <div className="service business-hours">
-                    <div className="test">goodbye</div>
                     <h3>Hours</h3>
                     <table className="table-hours">
                         <tbody>
