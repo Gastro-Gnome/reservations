@@ -9,6 +9,10 @@ h3 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
 }
+h3.reservation-title {
+    color: black;
+
+}
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -34,10 +38,10 @@ td.extra {
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-.test::before {
-    content: "hi"
-}
 .island-item {
     padding: 14px 11px 11px;
     border: solid orange 3px
+}
+.icon {
+    margin: .5em
 }

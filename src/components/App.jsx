@@ -44,7 +44,7 @@ class App extends Component {
         return (
             <div>
             <Reservations />
-            <Hours hoursItem={this.state.hoursItems[0]} />
+            <Hours hoursItem={this.state.hoursItems[0]} time={this.state.time}/>
             </div>
         )
     }
