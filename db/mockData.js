@@ -1,122 +1,146 @@
 //hardcoded models
 
 let biz1 = {
-    biz_hrs: [
-        {0: {
-            is_open: true,
+    biz_id: 1,
+    days: [
+        {
+            day: 0,
+            open: true,
             open_at: "7:00 am",
             close_at: "4:30 pm"
-        }},
-        {1: {
-            is_open: true,
+        },
+        {
+            day: 1,
+            open: true,
             open_at: "7:00 am",
             close_at: "4:30 pm"
-        }},
-        {2: {
-            is_open: true,
+        },
+        {
+            day: 2,
+            open: true,
             open_at: "7:00 am",
             close_at: "4:30 pm"
-        }},
-        {3: {
-            is_open: true,
+        },
+        {
+            day: 3,
+            open: true,
             open_at: "7:00 am",
             close_at: "4:30 pm"
-        }},
-        {4: {
-            is_open: true,
-            open_at: "7:00 am",
+        },
+        {
+            day: 4,
+            open: true,
+            open_at:"7:00 am",
             close_at: "4:30 pm"
-        }},
-        {5: {
-            is_open: true,
-            open_at: "10:00 am",
-            close_at: "8:00 pm"
-        }},
-        {6: {
-            is_open: true,
-            open_at: "10:00 am",
-            close_at: "8:00 pm"
-        }}
+        },
+        {
+            day: 5,
+            open: true,
+            open_at: "8:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 6,
+            open: true,
+            open_at:"8:00 am",
+            close_at: "4:30 pm"
+        }
     ]
 }
 
  let biz2 = {
-    biz_hrs: [
-        {0: {
-            is_open: true,
-            open_at: "8:00 am",
-            close_at: "5:00 pm"
-        }},
-        {1: {
-            is_open: true,
-            open_at: "8:00 am",
-            close_at: "5:00 pm"
-        }},
-        {2: {
-            is_open: true,
-            open_at: "8:00 am",
-            close_at: "5:00 pm"
-        }},
-        {3: {
-            is_open: true,
-            open_at: "8:00 am",
-            close_at: "5:00 pm"
-        }},
-        {4: {
-            is_open: true,
-            open_at: "8:00 am",
-            close_at: "5:00 pm"
-        }},
-        {5: {
-            is_open: true,
+    biz_id: 2,
+    days: [
+        {
+            day: 0,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "7:00 pm"
+        },
+        {
+            day: 1,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "7:00 pm"
+        },
+        {
+            day: 2,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "7:00 pm"
+        },
+        {
+            day: 3,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "7:00 pm"
+        },
+        {
+            day: 4,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "7:00 pm"
+        },
+        {
+            day: 5,
+            open: true,
             open_at: "12:00 pm",
-            close_at: "10:00 pm"
-        }},
-        {6: {
-            is_open: true,
-            open_at: "12:00 pm",
-            close_at: "10:00 pm"
-        }}
+            close_at: "7L00 pm"
+        },
+        {
+            day: 6,
+            open: true,
+            open_at: "12L00 pm",
+            close_at: "7L00 pm"
+        }
     ]
 }
 
  let biz3 = {
-    biz_hrs: [
-        {0: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {1: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {2: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {3: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {4: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {5: {
-            is_open: true,
-            open_at: "4:30 pm",
-            close_at: "12:00 am"
-        }},
-        {6: {
-            is_open: false,
+    biz_id: 1,
+    days: [
+        {
+            day: 0,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 1,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 2,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 3,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 4,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 5,
+            open: true,
+            open_at: "10:00 am",
+            close_at: "4:30 pm"
+        },
+        {
+            day: 6,
+            open: false,
             open_at: "",
             close_at: ""
-        }}
+        }
     ]
 }
 
