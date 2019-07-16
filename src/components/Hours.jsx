@@ -18,7 +18,19 @@ class Hours extends Component {
 
     }
     dailyStatus() {
-       // if (this.state.day === the element day)
+        //TODO
+    }
+    dayNumToName(num) {
+        let daysOfTheWeek = {
+            0: "Mon",
+            1: "Tue",
+            2: "Wed",
+            3: "Thu",
+            4: "Fri",
+            5: "Sat",
+            6: "Sun"
+        };
+        return daysOfTheWeek[num];
     }
     fetchHoursItems() {
         let instance = this
@@ -36,11 +48,15 @@ class Hours extends Component {
         return(
                 <div className="service business-hours">
                     <h3>Hours</h3>
-                    <div>
-                        {this.state.hoursItems[0].days.map((day, i) => {
-                            return <li key={i}>{day.open_at}</li>
-                        })}
-                    </div>
+                    <table>
+                        <tbody>
+                            {this.state.hoursItems[0].days.map((day, i) => {
+                                return (
+                                    <th key={i}><tr><td>{this.dayNumToName(day.day)}</td></tr></th>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </div> 
             )
     }
