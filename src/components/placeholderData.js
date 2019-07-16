@@ -42,3 +42,5 @@ placeholderData = {
         }
     ]
 }
+
+module.exports = placeholderData;
