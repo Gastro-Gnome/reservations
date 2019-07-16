@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import styles from "../main.css";
+import placeholderData from "./placeholderData.js";
 
 class Hours extends Component {
     constructor(props) {
         super(props)
         this.state = {
             day: this.props.time.getDay(),
-            hour: this.props.time.getHours()
+            hour: this.props.time.getHours(),
+            //TODO -- add placeholder data to state
+            hoursItems: [placeholderData]
         }
     }
     componentDidMount() {
-        //TODO
+        //TODO -- migrate fetchHoursItems from App
     }
     dailyStatus() {
        // if (this.state.day === the element day)
