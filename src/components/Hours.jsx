@@ -13,7 +13,7 @@ class Hours extends Component {
         this.fetchHoursItems = this.fetchHoursItems.bind(this);
     }
     componentDidMount() {
-        // this.fetchHoursItems();
+        this.fetchHoursItems();
         console.log(this.state.hoursItems[0].days[0].open_at);
 
     }
