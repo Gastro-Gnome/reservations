@@ -1,4 +1,5 @@
 placeholderData = {
+    biz_id: 0,
     days: [
         {
             day: 0,

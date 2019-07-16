@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import axios from "axios";
 import Hours from "./Hours.jsx";
 import Reservations from "./Reservations.jsx";
 
