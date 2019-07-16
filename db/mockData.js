@@ -6,92 +6,92 @@ let biz1 = {
         {
             day: 0,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at: 1700
         },
         {
             day: 1,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at: 1700
         },
         {
             day: 2,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at: 1700
         },
         {
             day: 3,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at: 1700
         },
         {
             day: 4,
             open: true,
-            open_at:"7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at: 1700
         },
         {
             day: 5,
             open: true,
-            open_at: "8:00 am",
-            close_at: "4:30 pm"
+            open_at: 800,
+            close_at: 1700
         },
         {
             day: 6,
-            open: true,
-            open_at:"8:00 am",
-            close_at: "4:30 pm"
+            open: false,
+            open_at: undefined,
+            close_at: undefined
         }
     ]
 }
 
  let biz2 = {
-    biz_id: 2,
+    biz_id: 1,
     days: [
         {
             day: 0,
             open: true,
-            open_at: "10:00 am",
-            close_at: "7:00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 1,
             open: true,
-            open_at: "10:00 am",
-            close_at: "7:00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 2,
             open: true,
-            open_at: "10:00 am",
-            close_at: "7:00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 3,
             open: true,
-            open_at: "10:00 am",
-            close_at: "7:00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 4,
             open: true,
-            open_at: "10:00 am",
-            close_at: "7:00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 5,
             open: true,
-            open_at: "12:00 pm",
-            close_at: "7L00 pm"
+            open_at: 800,
+            close_at: 2000
         },
         {
             day: 6,
-            open: true,
-            open_at: "12L00 pm",
-            close_at: "7L00 pm"
+            open: false,
+            open_at: undefined,
+            close_at: undefined
         }
     ]
 }
@@ -102,44 +102,44 @@ let biz1 = {
         {
             day: 0,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 1,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 2,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 3,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 4,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 5,
             open: true,
-            open_at: "10:00 am",
-            close_at: "4:30 pm"
+            open_at: 1000,
+            close_at: 1800
         },
         {
             day: 6,
-            open: false,
-            open_at: "",
-            close_at: ""
+            open: true,
+            open_at: 1000,
+            close_at: 2000
         }
     ]
 }
