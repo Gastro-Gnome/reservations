@@ -6,44 +6,44 @@ const hoursSchema = new mongoose.Schema({
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         },
         {
             day: Number,
             open: Boolean,
-            open_at: String,
-            close_at: String
+            open_at: Number,
+            close_at: Number
         }
     ]
 })
