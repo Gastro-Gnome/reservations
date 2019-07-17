@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import Hours from "./Hours.jsx";
-import Reservations from "./Reservations.jsx";
 
 class App extends Component {
     constructor(props) {

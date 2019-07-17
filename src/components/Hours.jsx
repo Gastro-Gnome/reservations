@@ -17,7 +17,7 @@ class Hours extends Component {
     }
     fetchHoursItems() {
         let instance = this
-        axios.get('http://localhost:3000/businesses')
+        axios.get('http://localhost:3004/businesses')
         .then(function (response) {
             //handle response
             instance.setState({hoursItems: response.data});
