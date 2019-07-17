@@ -80,21 +80,15 @@ class Hours extends Component {
         return daysOfTheWeek[num];
     }
     dailyStatus(day) {
-        //TODO -- return flag
-        //is the day on table today?
-        if (day === this.state.date.getDay()) {
-            console.log("today", this.state.date.getDay());
-            console.log("itemTime", day.open_at)
-            //is the hour in range?
+        if (day.dayId === this.state.date.getDay()) {
             let presentTime = this.state.date.getHours().toString();
             presentTime += this.state.date.getMinutes().toString();
             presentTime = Number.parseInt(presentTime);
-            console.log(presentTime);
             //
             if (presentTime >= day.open_at && presentTime <= day.close_at) {
                 return "Open now";
             } else {
-                return "TEST";
+                return "Closed";
             }
         }
 
@@ -106,15 +100,13 @@ class Hours extends Component {
                     <table>
                         <tbody>
                             {this.state.hoursItems[0].days.map((day, i) => {
-                                //condition: is_open (key: open => refactor schema, time permitting)
-                                //condition: open now, closed
                                 if (day.open) {
                                     return (
                                         <tr key={i}>
-                                            <td>{this.dayNumToName(day.day)}</td>
+                                            <td>{this.dayNumToName(day.dayId)}</td>
                                             <td className="open_at">{this.militaryToStdTime(day.open_at)}</td>
                                             <td className="close_at">{this.militaryToStdTime(day.close_at)}</td>
-                                            <td className="extra">{this.dailyStatus(day.day)}</td>
+                                            <td className="extra">{this.dailyStatus(day)}</td>
                                         </tr>
                                     )
                                 } else {
