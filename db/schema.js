@@ -4,43 +4,43 @@ const hoursSchema = new mongoose.Schema({
     biz_id: Number,
     days: [
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
         },
         {
-            day: Number,
+            dayId: Number,
             open: Boolean,
             open_at: Number,
             close_at: Number
