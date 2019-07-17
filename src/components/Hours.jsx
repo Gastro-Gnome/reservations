@@ -1,33 +1,115 @@
 import React, { Component } from "react";
+import axios from "axios";
 import styles from "../main.css";
+import placeholderData from "./placeholderData.js";
 
 class Hours extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            day: this.props.time.getDay(),
-            hour: this.props.time.getHours()
-        }
+            date: new Date,
+            hoursItems: [placeholderData]
+        };
+        this.fetchHoursItems = this.fetchHoursItems.bind(this);
     }
     componentDidMount() {
-        //TODO
+        this.fetchHoursItems();
+        console.log(this.state.hoursItems[0].days[0].open_at);
+
     }
-    dailyStatus() {
-       // if (this.state.day === the element day)
+    dailyStatus(day) {
+        //TODO
+        let timeOpen = this.state.date.getTime(day.open_at) //handle string "xx:xx xx"
+        let timeClosed = this.state.date.getTime(day.close_at)
+        // if (this.state.date) //is between timeOpen and timeClosed, render "open Now"
+
+    }
+    dayNumToName(num) {
+        let daysOfTheWeek = {
+            0: "Mon",
+            1: "Tue",
+            2: "Wed",
+            3: "Thu",
+            4: "Fri",
+            5: "Sat",
+            6: "Sun"
+        };
+        return daysOfTheWeek[num];
+    }
+    militaryToStdTime(num){
+        let key = {
+            13:1,
+            14:2,
+            15:3,
+            16:4,
+            17:5,
+            18:6,
+            19:7,
+            20:8,
+            21:9,
+            22:10,
+            23:11,
+            24:12
+        };
+        //
+        let strNum = num.toString();
+        let strFore = undefined;
+        let strAft = undefined;
+        //
+        if (num >= 1000) {
+            strFore = strNum.slice(0,2);
+            strAft = strNum.slice(2);
+        } else {
+            strFore = strNum.slice(0,1);
+            strAft = strNum.slice(1);
+        }
+        //
+        if (num < 1200 || num >=2400) {
+            if (num >= 2400) {
+                strFore = key[strFore];
+            }
+            return strFore + ":" + strAft +" am";
+        } else {
+            if (num >= 1300) {
+                strFore = key[strFore]
+            }
+            return strFore + ":" + strAft + " pm"
+        }
+    }
+    fetchHoursItems() {
+        let instance = this
+        axios.get('http://localhost:3000/businesses')
+        .then(function (response) {
+            //handle response
+            instance.setState({hoursItems: response.data});
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        });
     }
     render() {
         return(
                 <div className="service business-hours">
                     <h3>Hours</h3>
-                    <table className="table-hours">
+                    <table>
                         <tbody>
-                            <tr><th>Mon</th><td><span>{this.props.hoursItem.Mon.open_at}</span> - <span>{this.props.hoursItem.Mon.close_at}</span></td><td className="extra">Open now</td></tr>
-                            <tr><th>Tue</th><td><span>{this.props.hoursItem.Tue.open_at}</span> - <span>{this.props.hoursItem.Tue.close_at}</span></td><td className="extra"></td></tr>
-                            <tr><th>Wed</th><td><span>{this.props.hoursItem.Wed.open_at}</span> - <span>{this.props.hoursItem.Wed.close_at}</span></td><td className="extra"></td></tr>
-                            <tr><th>Thu</th><td><span>{this.props.hoursItem.Thu.open_at}</span> - <span>{this.props.hoursItem.Thu.close_at}</span></td><td className="extra"></td></tr>
-                            <tr><th>Fri</th><td><span>{this.props.hoursItem.Fri.open_at}</span> - <span>{this.props.hoursItem.Fri.close_at}</span></td><td className="extra"></td></tr>
-                            <tr><th>Sat</th><td><span>{this.props.hoursItem.Sat.open_at}</span> - <span>{this.props.hoursItem.Sat.close_at}</span></td><td className="extra"></td></tr>
-                            <tr><th>Sun</th><td><span>{this.props.hoursItem.Sun.open_at}</span> - <span>{this.props.hoursItem.Sun.close_at}</span></td><td className="extra"></td></tr>
+                            {this.state.hoursItems[0].days.map((day, i) => {
+                                //condition: is_open (key: open => refactor schema, time permitting)
+                                //condition: open now, closed
+                                if (day.open) {
+                                    return (
+                                        <tr key={i}>
+                                            <td>{this.dayNumToName(day.day)}</td>
+                                            <td className="open_at">{this.militaryToStdTime(day.open_at)}</td>
+                                            <td className="close_at">{this.militaryToStdTime(day.close_at)}</td>
+                                            <td className="extra">extra</td>
+                                        </tr>
+                                    )
+                                } else {
+                                    return <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">Closed</td></tr>
+                                }
+                            })}
                         </tbody>
                     </table>
                 </div> 
