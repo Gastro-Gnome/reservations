@@ -17,8 +17,12 @@ class Hours extends Component {
         console.log(this.state.hoursItems[0].days[0].open_at);
 
     }
-    dailyStatus() {
+    dailyStatus(day) {
         //TODO
+        let timeOpen = this.state.date.getTime(day.open_at) //handle string "xx:xx xx"
+        let timeClosed = this.state.date.getTime(day.close_at)
+        // if (this.state.date) //is between timeOpen and timeClosed, render "open Now"
+
     }
     dayNumToName(num) {
         let daysOfTheWeek = {
@@ -51,9 +55,15 @@ class Hours extends Component {
                     <table>
                         <tbody>
                             {this.state.hoursItems[0].days.map((day, i) => {
-                                return (
-                                    <th key={i}><tr><td>{this.dayNumToName(day.day)}</td></tr></th>
-                                )
+                                //condition: is_open (key: open => refactor schema, time permitting)
+                                //condition: open now, closed
+                                if (day.open) {
+                                    return (
+                                        <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">open_at</td><td className="close_at">close_at</td><td className="extra">extra</td></tr>
+                                    )
+                                } else {
+                                    return <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">Closed</td></tr>
+                                }
                             })}
                         </tbody>
                     </table>
