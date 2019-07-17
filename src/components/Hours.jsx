@@ -36,6 +36,46 @@ class Hours extends Component {
         };
         return daysOfTheWeek[num];
     }
+    militaryToStdTime(num){
+        let key = {
+            13:1,
+            14:2,
+            15:3,
+            16:4,
+            17:5,
+            18:6,
+            19:7,
+            20:8,
+            21:9,
+            22:10,
+            23:11,
+            24:12
+        };
+        //
+        let strNum = num.toString();
+        let strFore = undefined;
+        let strAft = undefined;
+        //
+        if (num >= 1000) {
+            strFore = strNum.slice(0,2);
+            strAft = strNum.slice(2);
+        } else {
+            strFore = strNum.slice(0,1);
+            strAft = strNum.slice(1);
+        }
+        //
+        if (num < 1200 || num >=2400) {
+            if (num >= 2400) {
+                strFore = key[strFore];
+            }
+            return strFore + ":" + strAft +" am";
+        } else {
+            if (num >= 1300) {
+                strFore = key[strFore]
+            }
+            return strFore + ":" + strAft + " pm"
+        }
+    }
     fetchHoursItems() {
         let instance = this
         axios.get('http://localhost:3000/businesses')
@@ -59,7 +99,12 @@ class Hours extends Component {
                                 //condition: open now, closed
                                 if (day.open) {
                                     return (
-                                        <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">open_at</td><td className="close_at">close_at</td><td className="extra">extra</td></tr>
+                                        <tr key={i}>
+                                            <td>{this.dayNumToName(day.day)}</td>
+                                            <td className="open_at">{this.militaryToStdTime(day.open_at)}</td>
+                                            <td className="close_at">{this.militaryToStdTime(day.close_at)}</td>
+                                            <td className="extra">extra</td>
+                                        </tr>
                                     )
                                 } else {
                                     return <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">Closed</td></tr>
