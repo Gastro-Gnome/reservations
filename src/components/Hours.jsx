@@ -69,18 +69,20 @@ class Hours extends Component {
     }
     dayNumToName(num) {
         let daysOfTheWeek = {
-            0: "Mon",
-            1: "Tue",
-            2: "Wed",
-            3: "Thu",
-            4: "Fri",
-            5: "Sat",
-            6: "Sun"
+            0: "Sun",
+            1: "Mon",
+            2: "Tue",
+            3: "Wed",
+            4: "Thu",
+            5: "Fri",
+            6: "Sat"
         };
         return daysOfTheWeek[num];
     }
     dailyStatus(day) {
         if (day.dayId === this.state.date.getDay()) {
+            console.log("dayId", day.dayId);
+            console.log("today", this.state.date.getDay());
             let presentTime = this.state.date.getHours().toString();
             presentTime += this.state.date.getMinutes().toString();
             presentTime = Number.parseInt(presentTime);
@@ -110,7 +112,7 @@ class Hours extends Component {
                                         </tr>
                                     )
                                 } else {
-                                    return <tr key={i}><td>{this.dayNumToName(day.day)}</td><td className="open_at">Closed</td></tr>
+                                    return <tr key={i}><td>{this.dayNumToName(day.dayId)}</td><td className="open_at">Closed</td></tr>
                                 }
                             })}
                         </tbody>

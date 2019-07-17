@@ -4,12 +4,6 @@ let biz1 = {
     biz_id: 1,
     days: [
         {
-            dayId: 0,
-            open: true,
-            open_at: 700,
-            close_at: 1700
-        },
-        {
             dayId: 1,
             open: true,
             open_at: 700,
@@ -36,11 +30,17 @@ let biz1 = {
         {
             dayId: 5,
             open: true,
-            open_at: 800,
+            open_at: 700,
             close_at: 1700
         },
         {
             dayId: 6,
+            open: true,
+            open_at: 800,
+            close_at: 1700
+        },
+        {
+            dayId: 0,
             open: false,
             open_at: undefined,
             close_at: undefined
@@ -49,14 +49,8 @@ let biz1 = {
 }
 
  let biz2 = {
-    biz_id: 1,
+    biz_id: 2,
     days: [
-        {
-            dayId: 0,
-            open: true,
-            open_at: 800,
-            close_at: 2000
-        },
         {
             dayId: 1,
             open: true,
@@ -89,6 +83,12 @@ let biz1 = {
         },
         {
             dayId: 6,
+            open: true,
+            open_at: 800,
+            close_at: 2000
+        },
+        {
+            dayId: 0,
             open: false,
             open_at: undefined,
             close_at: undefined
@@ -97,7 +97,7 @@ let biz1 = {
 }
 
  let biz3 = {
-    biz_id: 1,
+    biz_id: 3,
     days: [
         {
             dayId: 0,
