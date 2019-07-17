@@ -14,14 +14,13 @@ class Hours extends Component {
     }
     componentDidMount() {
         this.fetchHoursItems();
-        console.log(this.state.hoursItems[0].days[0].open_at);
-
     }
     dailyStatus(day) {
-        //TODO
-        let timeOpen = this.state.date.getTime(day.open_at) //handle string "xx:xx xx"
-        let timeClosed = this.state.date.getTime(day.close_at)
-        // if (this.state.date) //is between timeOpen and timeClosed, render "open Now"
+        //TODO -- return flag
+        //is the day on table today?
+        if (day === this.state.date.getDay()) {
+            return "TEST"
+        }
 
     }
     dayNumToName(num) {
@@ -103,7 +102,7 @@ class Hours extends Component {
                                             <td>{this.dayNumToName(day.day)}</td>
                                             <td className="open_at">{this.militaryToStdTime(day.open_at)}</td>
                                             <td className="close_at">{this.militaryToStdTime(day.close_at)}</td>
-                                            <td className="extra">extra</td>
+                                            <td className="extra">{this.dailyStatus(day.day)}</td>
                                         </tr>
                                     )
                                 } else {
