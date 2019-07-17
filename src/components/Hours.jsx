@@ -83,15 +83,18 @@ class Hours extends Component {
         //TODO -- return flag
         //is the day on table today?
         if (day === this.state.date.getDay()) {
+            console.log("today", this.state.date.getDay());
+            console.log("itemTime", day.open_at)
             //is the hour in range?
             let presentTime = this.state.date.getHours().toString();
             presentTime += this.state.date.getMinutes().toString();
             presentTime = Number.parseInt(presentTime);
+            console.log(presentTime);
             //
             if (presentTime >= day.open_at && presentTime <= day.close_at) {
                 return "Open now";
             } else {
-                return "Closed";
+                return "TEST";
             }
         }
 
