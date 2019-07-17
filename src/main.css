@@ -27,6 +27,14 @@ th {
     vertical-align: baseline;
     text-align: left
 }
+td.dayId {
+    font-weight: bold;
+    padding-right: 1.5em;
+}
+span {
+    padding-left: 3px;
+    padding-right: 3px;
+}
 td.extra {
     font-size: 12px;
     font-weight: bold;
@@ -37,10 +45,6 @@ td.extra {
 }
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-.island-item {
-    padding: 14px 11px 11px;
-    border: solid orange 3px
 }
 .icon {
     margin: .5em
