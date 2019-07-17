@@ -15,25 +15,17 @@ class Hours extends Component {
     componentDidMount() {
         this.fetchHoursItems();
     }
-    dailyStatus(day) {
-        //TODO -- return flag
-        //is the day on table today?
-        if (day === this.state.date.getDay()) {
-            return "TEST"
-        }
-
-    }
-    dayNumToName(num) {
-        let daysOfTheWeek = {
-            0: "Mon",
-            1: "Tue",
-            2: "Wed",
-            3: "Thu",
-            4: "Fri",
-            5: "Sat",
-            6: "Sun"
-        };
-        return daysOfTheWeek[num];
+    fetchHoursItems() {
+        let instance = this
+        axios.get('http://localhost:3000/businesses')
+        .then(function (response) {
+            //handle response
+            instance.setState({hoursItems: response.data});
+        })
+        .catch(function (error) {
+            // handle error
+            console.log(error);
+        });
     }
     militaryToStdTime(num){
         let key = {
@@ -75,17 +67,34 @@ class Hours extends Component {
             return strFore + ":" + strAft + " pm"
         }
     }
-    fetchHoursItems() {
-        let instance = this
-        axios.get('http://localhost:3000/businesses')
-        .then(function (response) {
-            //handle response
-            instance.setState({hoursItems: response.data});
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        });
+    dayNumToName(num) {
+        let daysOfTheWeek = {
+            0: "Mon",
+            1: "Tue",
+            2: "Wed",
+            3: "Thu",
+            4: "Fri",
+            5: "Sat",
+            6: "Sun"
+        };
+        return daysOfTheWeek[num];
+    }
+    dailyStatus(day) {
+        //TODO -- return flag
+        //is the day on table today?
+        if (day === this.state.date.getDay()) {
+            //is the hour in range?
+            let presentTime = this.state.date.getHours().toString();
+            presentTime += this.state.date.getMinutes().toString();
+            presentTime = Number.parseInt(presentTime);
+            //
+            if (presentTime >= day.open_at && presentTime <= day.close_at) {
+                return "Open now";
+            } else {
+                return "Closed";
+            }
+        }
+
     }
     render() {
         return(
