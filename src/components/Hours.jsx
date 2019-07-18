@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import styles from "../main.css";
 import placeholderData from "./placeholderData.js";
+import Model from "../../db/model.js"
+console.log(Model);
 
 class Hours extends Component {
     constructor(props) {
@@ -10,22 +12,19 @@ class Hours extends Component {
             date: new Date,
             hoursItems: [placeholderData]
         };
-        this.fetchHoursItems = this.fetchHoursItems.bind(this);
+        this.fetchAndSetHoursItems = this.fetchAndSetHoursItems.bind(this);
     }
     componentDidMount() {
-        this.fetchHoursItems();
+        this.fetchAndSetHoursItems()
     }
-    fetchHoursItems() {
-        let instance = this
-        axios.get('http://localhost:3004/businesses')
-        .then(function (response) {
-            //handle response
-            instance.setState({hoursItems: response.data});
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        });
+    fetchAndSetHoursItems() {
+        //api call to /businesses
+        fetch("http://localhost:3004/businesses/")
+        .then(docs => docs.json())
+        .then(docs => this.setState({
+            hoursItems: docs
+        }))
+        //setState to items
     }
     militaryToStdTime(num){
         let key = {

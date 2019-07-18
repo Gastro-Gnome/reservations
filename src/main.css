@@ -40,6 +40,9 @@ td.extra {
     font-weight: bold;
     color: #41a700;
 }
+td.close_at {
+    padding-right: 3px
+}
 .business-hours {
     background-color: white
 }
