@@ -15,4 +15,6 @@ console.log("seed script initiated");
    })
 };
 
+seed();
+
 module.exports = seed;
