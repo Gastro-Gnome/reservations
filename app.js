@@ -5,6 +5,7 @@ const businessesRouter = require("./routes/businesses.js");
 const port = 3004;
 
 app.use("/", express.static("./dist"));
+app.use("/reservations", express.static("./dist/bundle.js"));
 app.use("/businesses", businessesRouter);
 
 

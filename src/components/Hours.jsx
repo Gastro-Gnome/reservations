@@ -24,7 +24,7 @@ class Hours extends Component {
         .then(docs => this.setState({
             hoursItems: docs
         }))
-        //setState to items
+        .catch(err => console.error(err))
     }
     militaryToStdTime(num){
         let key = {
