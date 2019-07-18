@@ -4,8 +4,14 @@ const db = require("../db/index.js");
 const Model = require("../db/model.js");
 const seed = require("../db/seed.js");
 
+router.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 router.get('/', async (req, res, next) => {
-    //TODO -- query the db for hoursItems bizId 1
+    //TODO
+    //allow for CORS -- access-control-allow-origin
     console.log("/businesses < GET request");
     let query = await Model.find();
 
