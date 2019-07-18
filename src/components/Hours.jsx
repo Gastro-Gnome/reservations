@@ -16,7 +16,6 @@ class Hours extends Component {
         this.fetchAndSetHoursItems()
     }
     fetchAndSetHoursItems() {
-        //api call to /businesses
         fetch("http://localhost:3004/businesses/")
         .then(docs => docs.json())
         .then(docs => this.setState({

@@ -9,9 +9,6 @@ router.use(function(req, res, next) {
   next();
 });
 router.get('/', async (req, res, next) => {
-    //TODO
-    //allow for CORS -- access-control-allow-origin
-    console.log("/businesses < GET request");
     let query = await Model.find();
 
   res.send(query);
