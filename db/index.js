@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+        const mongoose = require("mongoose");
 const Model = require("./model.js");
 
 mongoose.connect("mongodb://127.0.0.1/test", {useNewUrlParser: true});

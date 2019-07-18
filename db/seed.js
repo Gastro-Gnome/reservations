@@ -10,7 +10,7 @@ console.log("seed script initiated");
        if (err) {
            console.error(err);
        } else {
-           console.log(docs);
+           console.log("success");
        }
    })
 };

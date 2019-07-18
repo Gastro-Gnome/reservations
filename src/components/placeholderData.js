@@ -2,43 +2,43 @@ placeholderData = {
     biz_id: 0,
     days: [
         {
-            day: 0,
+            dayId: 0,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at:1800
         },
         {
-            day: 1,
+            dayId: 1,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at:1800
         },
         {
-            day: 2,
+            dayId: 2,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at:1800
         },
         {
-            day: 3,
+            dayId: 3,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at:1800
         },
         {
-            day: 4,
+            dayId: 4,
             open: true,
-            open_at: "7:00 am",
-            close_at: "4:30 pm"
+            open_at: 700,
+            close_at:1800
         },
         {
-            day: 5,
+            dayId: 5,
             open: true,
-            open_at: "8:00 am",
-            close_at: "12:00 pm"
+            open_at: 700,
+            close_at: 1800
         },
         {
-            day: 6,
+            dayId: 6,
             open: false
         }
     ]

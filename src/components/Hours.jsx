@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import styles from "../main.css";
 import placeholderData from "./placeholderData.js";
-import Model from "../../db/model.js"
-console.log(Model);
 
 class Hours extends Component {
     constructor(props) {
